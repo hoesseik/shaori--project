@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaori – Natuurlijke Haarverzorging</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <img src="assets/images/shaori-logo.png" class="shaori-logo" alt="Shaori logo">
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#over">Over</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="hero-label">GEFERMENTEERD RIJSTWATER – CHINESE TRADITIE</p>
+      <h1>Shaori komt eraan.</h1>
+      <p class="hero-text">
+        Luxueuze haarverzorging, geworteld in eeuwenoude rituelen. Binnenkort beschikbaar als premium shampoo‑lijn.
+      </p>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <section class="about" id="over">
+    <div class="about-inner">
+      <h2>Wat is Shaori?</h2>
+      <p>
+        Shaori is een premium haarverzorgingsmerk in ontwikkeling. Onze eerste shampoo‑formule wordt zorgvuldig ontwikkeld en getest op basis van traditionele Chinese wijsheid.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <h2>Contact</h2>
+      <p>Heb je vragen of wil je met Shaori samenwerken? Laat het ons weten.</p>
+
+      <form id="contact-form" novalidate>
+        <div class="field-group">
+          <input type="text" id="contact-name" placeholder="Naam" required>
+        </div>
+
+        <div class="field-group">
+          <input type="email" id="contact-email" placeholder="Jouw e-mailadres" required>
+        </div>
+
+        <div class="field-group">
+          <textarea id="contact-message" rows="5" placeholder="Bericht" required></textarea>
+        </div>
+
+        <button type="submit" id="contact-button">Verstuur</button>
+        
+        <p id="contact-message-box" style="margin-top: 10px; display: none;"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="signup">
+    <div class="signup-inner">
+      <h2>Blijf op de hoogte</h2>
+      <p>Ontvang een melding zodra Shaori officieel lanceert.</p>
+
+      <form id="signup-form" novalidate>
+        <div class="field-group">
+          <input type="email" id="email-input" name="email" placeholder="Jouw e‑mailadres" required>
+        </div>
+        
+        <p id="message-box" style="margin-top: 10px; display: none;"></p>
+        
+        <button type="submit" id="signup-button">Aanmelden</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Shaori. Alle rechten voorbehouden.
+  </footer>
+
+  <script>
+    // Automatisch jaartal in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="/js/script.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
