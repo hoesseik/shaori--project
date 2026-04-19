@@ -1,0 +1,303 @@
+:root {
+  --shaori-red: #c01824;
+  --text-dark: #111;
+  --text-muted: #555;
+  --bg-light: #faf7f5;
+  --border-soft: #e3ded9;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --success: #1b7c3b;
+  --error: #b00020;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: #fff;
+  line-height: 1.6;
+}
+/* HEADER */
+.site-header {
+  border-bottom: 1px solid var(--border-soft);
+  background-color: #fff;
+  padding: 30px 40px; /* Meer ruimte boven en onder gegeven */
+  text-align: center;
+}
+
+/* De tekst "GEFERMENTEERD RIJSTWATER..." groter maken */
+.site-header {
+  font-size: 1.4rem;      /* Maakt alle tekst in de header groter */
+  font-weight: 600;       /* Iets dikker voor een luxe uitstraling */
+  letter-spacing: 1.5px;  /* Ruimte tussen de letters */
+  text-transform: uppercase; /* Alles in hoofdletters zoals op je screenshot */
+  color: #b08d57;         /* Een goud/brons-achtige kleur (past bij Shaori) */
+}
+.shaori-logo {
+  height: 120px;          /* Pas dit getal aan tot je het groot genoeg vindt */
+  width: auto;
+  margin-bottom: 15px;    /* Ruimte tussen logo en de tekst eronder */
+  display: inline-block;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--shaori-red);
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 40px 80px;
+  background-color: var(--bg-light);
+}
+
+.hero-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--shaori-red);
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin: 0 0 10px;
+}
+
+.hero-text {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.hero-image {
+  min-height: 260px;
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  border-radius: 8px;
+}
+
+/* SECTIONS */
+.about,
+.contact,
+.signup {
+  padding: 60px 40px;
+  background-color: #fff;
+}
+
+.about-inner,
+.contact-inner,
+.signup-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--shaori-red);
+  box-shadow: 0 0 0 1px rgba(192, 24, 36, 0.15);
+}
+
+button {
+  background-color: var(--shaori-red);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.response {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-height: 1.2em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.response--visible {
+  opacity: 1;
+}
+
+.response--success {
+  color: var(--success);
+}
+
+.response--error {
+  color: var(--error);
+}
+
+/* FOOTER */
+.site-footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 16px 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    padding-inline: 20px;
+  }
+
+  .about,
+  .contact,
+  .signup {
+    padding-inline: 20px;
+  }
+}
+/* PRODUCT PAGE — APPLE STYLE */
+.product-hero {
+  padding: 80px 40px;
+  background: #fff;
+}
+
+.product-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.product-hero-image {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-hero-text h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.product-subtitle {
+  color: var(--shaori-red);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-section,
+.why-shaori,
+.inci-section,
+.benefits,
+.usage,
+.product-details,
+.related-products {
+  padding: 60px 40px;
+}
+
+.related-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  background: radial-gradient(circle at top, #ffffff 0, #f3ece6 40%, #e4d7cc 100%);
+}
+
+@media (max-width: 768px) {
+  .product-hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+/* FEEDBACK MELDINGEN (Nieuwsbrief & Contact) */
+#message-box {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    min-height: 1.5em;
+    transition: all 0.3s ease;
+}
+
+/* We gebruiken jouw eigen variabelen voor de kleuren */
+.success-text {
+    color: var(--success);
+}
+
+.error-text {
+    color: var(--error);
+}
